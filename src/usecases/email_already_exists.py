@@ -1,7 +1,8 @@
 from abc import ABC, abstractmethod
+from typing import Awaitable
 
 
 class EmailAlreadyExists(ABC):
     @abstractmethod
-    def validate_email(self, email: str) -> bool:
+    async def validate_email(self, email: str):
         pass
